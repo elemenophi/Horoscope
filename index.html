@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="themes/ronald.min.css" />
+		<link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
+		<script src="js/jquery-1.8.2.min.js"></script>
+		<script src="js/jquery.mobile-1.2.0.min.js"></script>
+		
+		
+	<script>
+		function myFortune()
+		{
+		 var x = Math.floor((Math.random() * 99) + 1);
+    document.getElementById("number").innerHTML = x;
+	
+	colors = new Array();
+	
+	colors[0]="Red";
+	colors[1]="Green";
+	colors[2]="Blue";
+	colors[3]="Yellow";
+	colors[4]="Orange";
+	colors[5]="Violet";
+	colors[6]="Indigo";
+	colors[7]="Beige";
+	colors[8]="Pink";
+	colors[9]="Silver";
+	colors[10]="Gold";
+	colors[11]="White";
+	colors[12]="Black";
+	colors[13]="Dandeleon";
+	colors[14]="Maroon";
+	colors[15]="Grey";
+	colors[16]="Purple";
+	colors[17]="Mandarin";
+	
+	var randNum = Math.floor(Math.random()*colors.length);
+	document.getElementById('color').innerHTML=colors[randNum];
+	
+	
+	statement = new Array();
+	statement[0]="Your crush will bump you Today, so stay sharp :D ";
+	statement[1]="Its a good day to start!";
+	statement[2]="Tell the things you want to say, This will be the good opportunity!";
+	statement[3]="Everythings gonna be alright";
+	statement[4]="Hoorray ! for to day";
+	statement[5]="Don't do it now, How about later?";
+	statement[6]="You will find a big loot in COC, so keep playing!";
+	statement[7]="You will pass the mobile app subject, Coz sir kamote is kind <3";
+	var randNum = Math.floor(Math.random()*statement.length);
+	document.getElementById('hula').innerHTML=statement[randNum];
+		}
+		
+		function zod()
+		{
+		document.getElementById('fortune').disabled=true;
+		}
+		</script>
+		
+		
+	</head>
+
+
+	
+	<body>
+<!-- Page -->
+<div data-role = "page" id="home">
+<a href ="#main">
+<img src="bg.jpg" height="100%" width="100%" style="position:fixed">
+</div>
+<!-- second page -->
+	<div data-role="page" data-theme="b" id="main">
+	
+		<div data-role="header" >
+			
+			<h1>Your Fortune</h1>
+	
+		</div>
+	
+		<div data-role="content" id="twtbox">
+			<select id="zodiac" onclick="zod()">
+						<option  selected="selected">Enter your Zodiac Sign</option>
+						<option value="Capricorn" id="capri">Capricorn</option>
+						<option value="Aquarius" id="aqua">Aquarius</option>
+						<option value="Pisces" id="pisc">Pisces</option>
+						<option value="Aries" id="ari">Aries</option>
+						<option value="Taurus" id="tau">Taurus</option>
+						<option value="Gemini" id="gemi">Gemini</option>
+						<option value="Cancer" id="canc">Cancer</option>
+						<option value="Leo" id="leon">Leo</option>
+						<option value="Virgo" id="vir">Virgo</option>
+						<option value="Libra" id="lib">Libra</option>
+						<option value="Scorpio" id="scorp">Scorpio</option>
+						<option value="Sagittarius" id="sagi">Sagittarius</option>
+					</select>
+					<button id="fortune" onclick="myFortune()">Get your Fortune!</button>
+					<center><h3>Your Lucky Number:</h3> <h3 id="number">___</h3></center>
+					<center><h3>Your Lucky Color:</h3> <h3 id="color">___</h3></center>
+					<center><h3>Prediction:</h3> <h3 id="hula">___</h3></center>
+			
+	<!-- API -->		
+			
+		
+
+			
+		</div>
+		
+		<div data-role="footer" data-position="fixed" >
+		
+		
+<!--twitter api START-->
+	<script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");
+	</script>
+	
+	
+	
+	<center><a href="https://twitter.com/share" class="twitter-share-button" data-via="myFortune" data-text="	" data-value="txtStat" data-hashtag="" data-url="" data-lang="en" data-edit="false">Tweet</a></center>
+	<!--twitter api END-->
+	
+			
+			</div>
+			
+	
+		
+	</div>
+	</body>
+</html>
